@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digitech University</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #0044cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #003399;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 3px;
+      display: block;
+    }
+
+    nav ul li:hover {
+      background-color: #002266;
+    }
+
+    /* Dropdown style */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 22px;
+      left: 0;
+      background-color: #003399;
+      min-width: 220px;
+      z-index: 1000;
+      flex-direction: column;
+    }
+
+    .dropdown-content a {
+      padding: 10px 15px;
+      display: block;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #001f4d;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      flex: 1;
+      padding: 0px;
+      background-color: #f8f8f8;
+      margin-top: 0px;
+    }
+
+    .logo-center {
+      position: fixed;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      opacity: 0.2;
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    .judul-kampus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .judul-kampus h1,
+    .judul-kampus h3 {
+      margin: 0;
+    }
+
+    footer {
+      background-color: #003399;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="judul-kampus">
+      <h1 style="font-size: 40px;">Digitech University &nbsp;-</h1>
+      <h3><i>&nbsp;&nbsp;" Gerbang Peradaban Digital "</i></h3>
+    </div>
+  </header>
+
+  <img src="logo UTD.png" alt="Logo Kampus" class="logo-center">
+
+  <nav>
+    <ul>
+      <li class="dropdown">
+        <a href="#">BEASISWA</a>
+        <div class="dropdown-content">
+          <a href="#">Beasiswa Prestasi</a>
+          <a href="#">Beasiswa KIP Kuliah</a>
+          <a href="#">Beasiswa Tahfidz</a>
+          <a href="#">Beasiswa Koperasi</a>
+          <a href="#">Beasiswa Perusahaan</a>
+          <a href="#">Beasiswa Walikota Bandung</a>
+        </div>
+     </li>
+
+     <li class="dropdown">
+        <a href="#">WISUDA</a>
+        <div class="dropdown-content">
+          <a href="#">Pendaftaran Wisuda</a>
+          <a href="#">Profil Wisudawan</a>
+          <a href="#">Dokumentasi</a>
+         </div>
+     </li>
+
+     <li class="dropdown">
+        <a href="#">PROFIL</a>
+        <div class="dropdown-content">
+          <a href="#">Visi Misi</a>
+          <a href="#">Struktur Organisasi</a>
+          <a href="#">Logo</a>
+          <a href="#">Mars & Hymne</a>
+          <a href="#">Sertifikat Akreditasi Institusi</a>
+          <a href="#">Sambutan Rektor</a>
+          <a href="#">Sertifikat Akreditasi Program Studi</a>
+         </div>
+     </li>
+
+     <li class="dropdown">
+        <a href="#">PENDAFTARAN</a>
+        <div class="dropdown-content">
+          <a href="#">Informasi Biaya Kuliah</a>
+          <a href="#">Daftar</a>
+          <a href="#">Informasi Pendaftaran</a>
+          <a href="#">Informasi Program RGR</a>
+          <a href="#">Informasi Fasilitas Kampus</a>
+          <a href="#">FAQ Tentang Pendaftaran</a>
+          <a href="#">Informasi Jadwal Pendaftaran</a>
+         </div>
+     </li>
+
+     <li class="dropdown">
+        <a href="#">PRODI</a>
+        <div class="dropdown-content">
+          <a href="#">Diploma ( D3 )</a>
+          <a href="#">Sarjana ( S1 )</a>
+          <a href="#">Magister ( S2 )</a>
+        </div>
+     </li>
+
+     <li class="dropdown">
+        <a href="#">AKADEMIK</a>
+        <div class="dropdown-content">
+          <a href="#">Kalender Akademik</a>
+          <a href="#">Pedoman Akademik</a>
+          <a href="#">Prosedur Mutu Akademik</a>
+          <a href="#">Pengembangan Suasana Akademik</a>
+          <a href="#">Hasil Surfey Kepuasan Mahasiswa Terhadap Lembaga</a>
+        </div>
+     </li>
+
+     <li class="dropdown">
+        <a href="#">KEMAHASISWAAN</a>
+        <div class="dropdown-content">
+          <a href="#">Lowongan Pekerjaan</a>
+          <a href="#">ORMAWA</a>
+          <a href="#">Prestasi Mahasiswa</a>
+          <a href="#">Alumni</a>
+          <a href="#">Tracer Studi</a>
+        </div>
+     </li>
+
+
+     <li class="dropdown">
+        <a href="#">LPPM</a>
+        <div class="dropdown-content">
+          <a href="#">Profil LPPM</a>
+          <a href="#">Penelitian</a>
+          <a href="#">Pengabdian Masyarakat</a>
+          <a href="#">Publikasi Ilmiah</a>
+          <a href="#">Dokumen dan Panduan</a>
+	  <a href="#">Berita dan Agendat</a>
+          <a href="#">Kerjasama</a>
+          <a href="#">PROSIDING</a>
+        </div>
+     </li>
+
+     <li class="dropdown">
+        <a href="#">BPM</a>
+        <div class="dropdown-content">
+        
+        </div>
+     </li>
+
+     <li class="dropdown">
+        <a href="#">KOLEKSI</a>
+        <div class="dropdown-content">
+          <a href="#">Daftar Buku</a>
+          <a href="#">Daftar E-Journal</a>
+          <a href="#">Daftar Proceeding</a>
+          <a href="#">Daftar E-Book</a>
+          <a href="#">Testing</a>
+	</div>
+     </li>
+
+
+    </ul>
+  </nav>
+
+  <main>
+    <h2 style="text-align: center;">Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
+    <p style="text-align: center;">Selamat datang di website resmi <b>Digitech University</b>. Semoga kunjungan Anda membawa keberkahan dan menjadi awal dari perjalanan ilmu yang bermanfaat.</p>
+  </main>
+
+  <footer>
+    &copy; 2025 Digitech University
+  </footer>
+
+</body>
+</html>
