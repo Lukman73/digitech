@@ -39,11 +39,12 @@
       padding: 10px;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     nav ul li {
       position: relative;
-      margin: 0 20px;
+      margin: 5px 15px;
     }
 
     nav ul li a {
@@ -58,11 +59,10 @@
       background-color: #002266;
     }
 
-    /* Dropdown style */
     .dropdown-content {
       display: none;
       position: absolute;
-      top: 22px;
+      top: 25px;
       left: 0;
       background-color: #003399;
       min-width: 220px;
@@ -87,9 +87,8 @@
 
     main {
       flex: 1;
-      padding: 0px;
+      padding: 20px;
       background-color: #f8f8f8;
-      margin-top: 0px;
     }
 
     .logo-center {
@@ -122,6 +121,32 @@
       text-align: center;
       padding: 10px;
     }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 5px 0;
+      }
+
+      .logo-center {
+        width: 80%;
+        top: 50%;
+      }
+
+      .judul-kampus h1 {
+        font-size: 28px;
+        text-align: center;
+      }
+
+      .judul-kampus h3 {
+        font-size: 16px;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -147,18 +172,18 @@
           <a href="#">Beasiswa Perusahaan</a>
           <a href="#">Beasiswa Walikota Bandung</a>
         </div>
-     </li>
+      </li>
 
-     <li class="dropdown">
+      <li class="dropdown">
         <a href="#">WISUDA</a>
         <div class="dropdown-content">
           <a href="#">Pendaftaran Wisuda</a>
           <a href="#">Profil Wisudawan</a>
           <a href="#">Dokumentasi</a>
-         </div>
-     </li>
+        </div>
+      </li>
 
-     <li class="dropdown">
+      <li class="dropdown">
         <a href="#">PROFIL</a>
         <div class="dropdown-content">
           <a href="#">Visi Misi</a>
@@ -168,10 +193,10 @@
           <a href="#">Sertifikat Akreditasi Institusi</a>
           <a href="#">Sambutan Rektor</a>
           <a href="#">Sertifikat Akreditasi Program Studi</a>
-         </div>
-     </li>
+        </div>
+      </li>
 
-     <li class="dropdown">
+      <li class="dropdown">
         <a href="#">PENDAFTARAN</a>
         <div class="dropdown-content">
           <a href="#">Informasi Biaya Kuliah</a>
@@ -181,30 +206,30 @@
           <a href="#">Informasi Fasilitas Kampus</a>
           <a href="#">FAQ Tentang Pendaftaran</a>
           <a href="#">Informasi Jadwal Pendaftaran</a>
-         </div>
-     </li>
+        </div>
+      </li>
 
-     <li class="dropdown">
+      <li class="dropdown">
         <a href="#">PRODI</a>
         <div class="dropdown-content">
-          <a href="#">Diploma ( D3 )</a>
-          <a href="#">Sarjana ( S1 )</a>
-          <a href="#">Magister ( S2 )</a>
+          <a href="#">Diploma (D3)</a>
+          <a href="#">Sarjana (S1)</a>
+          <a href="#">Magister (S2)</a>
         </div>
-     </li>
+      </li>
 
-     <li class="dropdown">
+      <li class="dropdown">
         <a href="#">AKADEMIK</a>
         <div class="dropdown-content">
           <a href="#">Kalender Akademik</a>
           <a href="#">Pedoman Akademik</a>
           <a href="#">Prosedur Mutu Akademik</a>
           <a href="#">Pengembangan Suasana Akademik</a>
-          <a href="#">Hasil Surfey Kepuasan Mahasiswa Terhadap Lembaga</a>
+          <a href="#">Hasil Survei Kepuasan Mahasiswa</a>
         </div>
-     </li>
+      </li>
 
-     <li class="dropdown">
+      <li class="dropdown">
         <a href="#">KEMAHASISWAAN</a>
         <div class="dropdown-content">
           <a href="#">Lowongan Pekerjaan</a>
@@ -213,10 +238,9 @@
           <a href="#">Alumni</a>
           <a href="#">Tracer Studi</a>
         </div>
-     </li>
+      </li>
 
-
-     <li class="dropdown">
+      <li class="dropdown">
         <a href="#">LPPM</a>
         <div class="dropdown-content">
           <a href="#">Profil LPPM</a>
@@ -224,37 +248,38 @@
           <a href="#">Pengabdian Masyarakat</a>
           <a href="#">Publikasi Ilmiah</a>
           <a href="#">Dokumen dan Panduan</a>
-	  <a href="#">Berita dan Agendat</a>
+          <a href="#">Berita dan Agenda</a>
           <a href="#">Kerjasama</a>
-          <a href="#">PROSIDING</a>
+          <a href="#">Prosiding</a>
         </div>
-     </li>
+      </li>
 
-     <li class="dropdown">
+      <li class="dropdown">
         <a href="#">BPM</a>
         <div class="dropdown-content">
-        
+          <a href="#">Profil BPM</a>
+          <a href="#">Kebijakan Mutu</a>
+          <a href="#">Evaluasi Internal</a>
         </div>
-     </li>
+      </li>
 
-     <li class="dropdown">
+      <li class="dropdown">
         <a href="#">KOLEKSI</a>
         <div class="dropdown-content">
           <a href="#">Daftar Buku</a>
           <a href="#">Daftar E-Journal</a>
           <a href="#">Daftar Proceeding</a>
           <a href="#">Daftar E-Book</a>
-          <a href="#">Testing</a>
-	</div>
-     </li>
-
-
+        </div>
+      </li>
     </ul>
   </nav>
 
   <main>
     <h2 style="text-align: center;">Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
-    <p style="text-align: center;">Selamat datang di website resmi <b>Digitech University</b>. Semoga kunjungan Anda membawa keberkahan dan menjadi awal dari perjalanan ilmu yang bermanfaat.</p>
+    <p style="text-align: center;">
+      Selamat datang di website resmi <b>Digitech University</b>. Semoga kunjungan Anda membawa keberkahan dan menjadi awal dari perjalanan ilmu yang bermanfaat.
+    </p>
   </main>
 
   <footer>
