@@ -7,6 +7,19 @@
   <meta name="description" content="Universitas Teknologi Digital - Gerbang Peradaban Digital. Daftar sekarang untuk masa depan yang lebih cerah!" />
   <title>Universitas Teknologi Digital | PMB 2025 | Kuliah Digital Masa Depan</title>
 
+  <!-- Open Graph (SEO + Sosmed) -->
+  <meta property="og:title" content="Universitas Teknologi Digital | PMB 2025" />
+  <meta property="og:description" content="Daftar kuliah di kampus digital masa depan. Beasiswa tersedia untuk 100 pendaftar pertama." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lukman73.github.io/digitech/" />
+  <meta property="og:image" content="https://lukman73.github.io/digitech/logo.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Universitas Teknologi Digital | PMB 2025" />
+  <meta name="twitter:description" content="Daftar kuliah di kampus digital masa depan. Beasiswa tersedia untuk 100 pendaftar pertama." />
+  <meta name="twitter:image" content="https://lukman73.github.io/digitech/logo.jpg" />
+
   <style>
     * {
       margin: 0;
@@ -33,7 +46,7 @@
     header {
       position: relative;
       z-index: 5;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.85);
       padding: 20px;
       text-align: center;
       font-size: 24px;
@@ -49,6 +62,27 @@
       padding: 10px;
       font-size: 18px;
       font-weight: bold;
+    }
+
+    section {
+      position: relative;
+      z-index: 5;
+      padding: 20px;
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 12px;
+      color: #000;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 720px;
+      text-align: justify;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #003366;
     }
 
     #btn-suara {
@@ -88,41 +122,39 @@
 
   <!-- HEADER -->
   <header>
-    Digitech University&nbsp;&nbsp;-&nbsp;&nbsp; <i>Gerbang Peradaban Digital</i>
+    <h1>Universitas Teknologi Digital</h1>
+    <p><i>Gerbang Peradaban Digital</i></p>
   </header>
 
+  <!-- Marquee Info -->
   <div class="marquee">
     <marquee behavior="scroll" direction="left" scrollamount="6">
       Pendaftaran Mahasiswa Baru 2025 telah dibuka ! &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Kunjungi laman resmi kami di https://pmb.digitechuniversity.ac.id/ &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Beasiswa tersedia untuk 100 pendaftar pertama !
     </marquee>
   </div>
 
+ 
   <!-- Tombol untuk mengaktifkan suara -->
   <button id="btn-suara" onclick="aktifkanSuara()">🔊 Suara ON</button>
 
+  <!-- Script Video dan Blokir DevTools -->
   <script>
     function aktifkanSuara() {
       const iframe = document.getElementById("video-frame");
-
-      // Ganti URL untuk unmute (mute=0)
       const newSrc = "https://www.youtube.com/embed/Bj3FudObCUs?autoplay=1&mute=0&loop=1&playlist=Bj3FudObCUs&controls=0&showinfo=0&modestbranding=1";
-
       iframe.src = newSrc;
-
-      // Sembunyikan tombol setelah diklik
       document.getElementById("btn-suara").style.display = "none";
     }
 
-document.onkeydown = function(e) {
-    if (
-      e.keyCode == 123 || // F12
-      (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
-      (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
-    ) {
-      return false;
+    document.onkeydown = function(e) {
+      if (
+        e.keyCode == 123 || // F12
+        (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
+        (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
+      ) {
+        return false;
+      }
     }
-  }
-    
   </script>
 
 </body>
