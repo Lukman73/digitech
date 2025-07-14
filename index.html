@@ -6,25 +6,28 @@
   <title>Universitas Teknologi Digital</title>
 
   <style>
-    /* Reset margin & padding */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Video background fullscreen */
-    #video-bg {
+    .video-wrapper {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      object-fit: cover;
       z-index: -1;
+      overflow: hidden;
     }
 
-    /* HEADER */
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
     header {
       position: relative;
       z-index: 5;
@@ -46,21 +49,6 @@
       font-weight: bold;
     }
 
-    /* Judul tengah halaman (opsional) */
-    .judul-teks {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 36px;
-      font-weight: bold;
-      z-index: 3;
-      text-shadow: 2px 2px 4px #000;
-      text-align: center;
-    }
-
-    /* Tombol suara */
     #btn-suara {
       position: fixed;
       bottom: 30px;
@@ -85,11 +73,16 @@
 </head>
 <body>
 
-  <!-- Video sebagai background -->
-  <video id="video-bg" autoplay muted loop playsinline>
-    <source src="Building.mp4" type="video/mp4">
-    Maaf, browser Anda tidak mendukung video.
-  </video>
+  <!-- Video YouTube sebagai background -->
+  <div class="video-wrapper">
+    <iframe
+      id="video-frame"
+      src="https://www.youtube.com/embed/Bj3FudObCUs?autoplay=1&mute=1&loop=1&playlist=Bj3FudObCUs&controls=0&showinfo=0&modestbranding=1"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
 
   <!-- HEADER -->
   <header>
@@ -101,19 +94,18 @@
       Pendaftaran Mahasiswa Baru 2025 telah dibuka ! &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Kunjungi laman resmi kami di https://pmb.digitechuniversity.ac.id/ &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Beasiswa tersedia untuk 100 pendaftar pertama !
     </marquee>
   </div>
-  <!-- Judul Tengah Halaman (Opsional) -->
-  <!-- <div class="judul-teks">
-    Selamat Datang di UTD
-  </div> -->
 
   <!-- Tombol untuk mengaktifkan suara -->
-  <button id="btn-suara" onclick="playWithSound()">🔊 Suara ON</button>
+  <button id="btn-suara" onclick="aktifkanSuara()">🔊 Suara ON</button>
 
   <script>
-    function playWithSound() {
-      const video = document.getElementById("video-bg");
-      video.muted = false;
-      video.play();
+    function aktifkanSuara() {
+      const iframe = document.getElementById("video-frame");
+
+      // Ganti URL untuk unmute (mute=0)
+      const newSrc = "https://www.youtube.com/embed/Bj3FudObCUs?autoplay=1&mute=0&loop=1&playlist=Bj3FudObCUs&controls=0&showinfo=0&modestbranding=1";
+
+      iframe.src = newSrc;
 
       // Sembunyikan tombol setelah diklik
       document.getElementById("btn-suara").style.display = "none";
