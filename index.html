@@ -35,10 +35,10 @@
       overflow: hidden;
     }
 
-    .video-wrapper video {
+    .video-wrapper iframe {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      pointer-events: none;
     }
 
     header {
@@ -107,12 +107,14 @@
 </head>
 <body>
 
-  <!-- Video Background dari Google Drive -->
+  <!-- Video Background dari YouTube -->
   <div class="video-wrapper">
-    <video id="bg-video" autoplay muted loop playsinline>
-      <source src="https://drive.google.com/uc?export=download&id=16bp9sgiGT2OzM14XNgDZ_P8UzQVLhSJ3" type="video/mp4">
-      Browser Anda tidak mendukung pemutar video.
-    </video>
+    <iframe id="video-frame"
+      src="https://www.youtube.com/embed/Bj3FudObCUs?autoplay=1&mute=1&loop=1&playlist=Bj3FudObCUs&controls=0&showinfo=0&modestbranding=1"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
   </div>
 
   <!-- HEADER -->
@@ -131,12 +133,12 @@
   <!-- Tombol untuk mengaktifkan suara -->
   <button id="btn-suara" onclick="aktifkanSuara()">🔊 Suara ON</button>
 
-  <!-- Script Aktifkan Suara + Blok Dev Tools -->
+  <!-- Script Aktifkan Suara YouTube + Blok Dev Tools -->
   <script>
     function aktifkanSuara() {
-      const video = document.getElementById("bg-video");
-      video.muted = false;
-      video.play();
+      const iframe = document.getElementById("video-frame");
+      const newSrc = "https://www.youtube.com/embed/Bj3FudObCUs?autoplay=1&mute=0&loop=1&playlist=Bj3FudObCUs&controls=0&showinfo=0&modestbranding=1";
+      iframe.src = newSrc;
       document.getElementById("btn-suara").style.display = "none";
     }
 
