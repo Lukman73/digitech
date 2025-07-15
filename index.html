@@ -13,11 +13,11 @@
   <meta property="og:title" content="Universitas Teknologi Digital | PMB 2025" />
   <meta property="og:description" content="Daftar kuliah di kampus digital masa depan. Beasiswa tersedia untuk 100 pendaftar pertama." />
   <meta property="og:url" content="https://lukman73.github.io/digitech/" />
- 
+
   <!-- Twitter Card -->
   <meta name="twitter:title" content="Universitas Teknologi Digital | PMB 2025" />
   <meta name="twitter:description" content="Daftar kuliah di kampus digital masa depan. Beasiswa tersedia untuk 100 pendaftar pertama." />
-  
+
   <style>
     * {
       margin: 0;
@@ -35,10 +35,10 @@
       overflow: hidden;
     }
 
-    .video-wrapper iframe {
+    .video-wrapper video {
       width: 100%;
       height: 100%;
-      pointer-events: none;
+      object-fit: cover;
     }
 
     header {
@@ -107,14 +107,12 @@
 </head>
 <body>
 
-  <!-- Video YouTube sebagai background -->
+  <!-- Video Background dari Google Drive -->
   <div class="video-wrapper">
-    <video width="640" height="360" autoplay muted loop playsinline>
-  <source src="https://drive.google.com/uc?export=download&id=16bp9sgiGT2OzM14XNgDZ_P8UzQVLhSJ3" type="video/mp4">
-  Browser Anda tidak mendukung pemutar video.
-</video>
-
-
+    <video id="bg-video" autoplay muted loop playsinline>
+      <source src="https://drive.google.com/uc?export=download&id=16bp9sgiGT2OzM14XNgDZ_P8UzQVLhSJ3" type="video/mp4">
+      Browser Anda tidak mendukung pemutar video.
+    </video>
   </div>
 
   <!-- HEADER -->
@@ -130,16 +128,15 @@
     </marquee>
   </div>
 
- 
   <!-- Tombol untuk mengaktifkan suara -->
   <button id="btn-suara" onclick="aktifkanSuara()">🔊 Suara ON</button>
 
-  <!-- Script Video dan Blokir DevTools -->
+  <!-- Script Aktifkan Suara + Blok Dev Tools -->
   <script>
     function aktifkanSuara() {
-      const iframe = document.getElementById("video-frame");
-      const newSrc = "https://www.youtube.com/embed/Bj3FudObCUs?autoplay=1&mute=0&loop=1&playlist=Bj3FudObCUs&controls=0&showinfo=0&modestbranding=1";
-      iframe.src = newSrc;
+      const video = document.getElementById("bg-video");
+      video.muted = false;
+      video.play();
       document.getElementById("btn-suara").style.display = "none";
     }
 
