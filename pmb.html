@@ -29,7 +29,7 @@
     .marquee span {
       display: inline-block;
       padding-left: 100%;
-      animation: scroll-left 30s linear infinite; /* diperlambat dari 15s jadi 30s */
+      animation: scroll-left 30s linear infinite;
     }
 
     @keyframes scroll-left {
@@ -45,6 +45,10 @@
       width: 100vw;
       height: 100vh;
       border: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
     }
   </style>
 </head>
@@ -55,12 +59,9 @@
   </div>
 
   <iframe 
-    src="https://drive.google.com/file/d/1w0ABiQrG1nmCUZHLYYIpins5r8PUOQuZ/preview?autoplay=1&mute=1&loop=1"
+    src="https://drive.google.com/file/d/1w0ABiQrG1nmCUZHLYYIpins5r8PUOQuZ/preview?autoplay=1"
     allow="autoplay">
   </iframe>
 
 </body>
 </html>
-
-
-
