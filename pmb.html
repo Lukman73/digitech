@@ -41,24 +41,14 @@
       }
     }
 
-    .video-container {
+    iframe {
       position: absolute;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      z-index: 1;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
       border: none;
-    }
-
-    /* Mengakali mute dengan menyetel volume 0 via CSS untuk elemen iframe */
-    iframe::-webkit-media-controls-volume-slider {
-      display: none;
+      z-index: 1;
     }
   </style>
 </head>
@@ -68,13 +58,10 @@
     <span>Selamat Datang di Universitas Teknologi Digital — Gerbang Peradaban Digital !&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;Pendaftaran Mahasiswa Baru 2025 dibuka ! &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;Kuliah Perdana dimulai Oktober 2025&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;Daftar sekarang melalui https://pmb.digitechuniversity.ac.id/</span>
   </div>
 
-  <div class="video-container">
-    <iframe 
-      src="https://drive.google.com/file/d/1w0ABiQrG1nmCUZHLYYIpins5r8PUOQuZ/preview?autoplay=1"
-      allow="autoplay"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <iframe 
+    src="https://drive.google.com/file/d/1w0ABiQrG1nmCUZHLYYIpins5r8PUOQuZ/preview"
+    allow="autoplay">
+  </iframe>
 
 </body>
 </html>
