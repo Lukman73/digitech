@@ -65,17 +65,36 @@
   </iframe>
   
 <script>
-document.addEventListener('contextmenu', event => event.preventDefault());
-document.onkeydown = function(e) {
+  // Blok tombol shortcut developer tools
+  document.addEventListener('keydown', function (e) {
     if (
-      e.keyCode == 123 || // F12
-      (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
-      (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C' || e.key === 'J')) ||
+      (e.ctrlKey && e.key === 'U') ||
+      (e.ctrlKey && e.key === 'S')
     ) {
+      e.preventDefault();
+      alert("Akses ini dibatasi oleh administrator situs.");
       return false;
     }
-  }
-  </script>
+  });
+
+  // Blok klik kanan
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    alert("Klik kanan dinonaktifkan.");
+  });
+
+  // Blok seleksi teks
+  document.addEventListener('selectstart', function (e) {
+    e.preventDefault();
+  });
+
+  // Blok drag (gambar, teks, dsb.)
+  document.addEventListener('dragstart', function (e) {
+    e.preventDefault();
+  });
+</script>
   
 </body>
 </html>
