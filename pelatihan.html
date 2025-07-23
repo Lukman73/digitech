@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="google530694299d87ab32" />
+  <meta name="description" content="Universitas Teknologi Digital - Gerbang Peradaban Digital. Daftar sekarang untuk masa depan yang lebih cerah!" />
+  <meta name="keywords" content="Universitas Teknologi Digital, PMB 2025, Pendaftaran Mahasiswa Baru, Kampus Digital, Kuliah Masa Depan, Beasiswa Kuliah, Kuliah Online, Teknologi Digital, Pendidikan Modern" />
+  <title>Universitas Teknologi Digital | PMB 2025 | Kuliah Digital Masa Depan</title>
+
+  <!-- Open Graph (SEO + Sosmed) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Universitas Teknologi Digital | PMB 2025" />
+  <meta property="og:description" content="Daftar kuliah di kampus digital masa depan. Beasiswa tersedia untuk 100 pendaftar pertama." />
+  <meta property="og:url" content="https://lukman73.github.io/digitech/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:title" content="Universitas Teknologi Digital | PMB 2025" />
+  <meta name="twitter:description" content="Daftar kuliah di kampus digital masa depan. Beasiswa tersedia untuk 100 pendaftar pertama." />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .video-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    header {
+      position: relative;
+      z-index: 5;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .marquee {
+      position: relative;
+      z-index: 5;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    section {
+      position: relative;
+      z-index: 5;
+      padding: 20px;
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 12px;
+      color: #000;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 720px;
+      text-align: justify;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #003366;
+    }
+
+    #btn-suara {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 10;
+      padding: 12px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #btn-suara:hover {
+      background: rgba(255, 255, 255, 0.9);
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video Background dari YouTube -->
+  <div class="video-wrapper">
+    <iframe id="video-frame"
+      src="https://www.youtube.com/embed/Bj3FudObCUs?autoplay=1&mute=1&loop=1&playlist=Bj3FudObCUs&controls=0&showinfo=0&modestbranding=1"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Universitas Teknologi Digital</h1>
+    <p><i>Gerbang Peradaban Digital</i></p>
+  </header>
+
+  <!-- Marquee Info -->
+  <div class="marquee">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      Pendaftaran Mahasiswa Baru 2025 telah dibuka ! &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Kunjungi laman resmi kami di https://pmb.digitechuniversity.ac.id/ &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Beasiswa tersedia untuk 100 pendaftar pertama !
+    </marquee>
+  </div>
+
+  <!-- Tombol untuk mengaktifkan suara -->
+  <button id="btn-suara" onclick="aktifkanSuara()">🔊 Suara ON</button>
+
+  <!-- Script Aktifkan Suara YouTube + Blok Dev Tools -->
+  <script>
+    function aktifkanSuara() {
+      const iframe = document.getElementById("video-frame");
+      const newSrc = "https://www.youtube.com/embed/Bj3FudObCUs?autoplay=1&mute=0&loop=1&playlist=Bj3FudObCUs&controls=0&showinfo=0&modestbranding=1";
+      iframe.src = newSrc;
+      document.getElementById("btn-suara").style.display = "none";
+    }
+
+    document.onkeydown = function(e) {
+      if (
+        e.keyCode == 123 || // F12
+        (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
+        (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
+      ) {
+        return false;
+      }
+    }
+  </script>
+
+</body>
+</html>
