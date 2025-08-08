@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas Teknologi Digital | Kampus Terbaik untuk Jurusan IT</title>
+    <style>
+        /* ================================================= */
+        /* === Gaya Dasar untuk Seluruh Halaman === */
+        /* ================================================= */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ================================================= */
+        /* === Gaya untuk Header (Bagian Atas) === */
+        /* ================================================= */
+        .header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-left img {
+            height: 80px;
+        }
+
+        .header-right img {
+            height: 85px;
+        }
+
+        /* ================================================= */
+        /* === Gaya untuk Bar Merah === */
+        /* ================================================= */
+        .red-bar {
+            background-color: red;
+            color: white;
+            padding: 10px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Gaya untuk teks berjalan */
+        .marquee-text {
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            white-space: nowrap;
+        }
+
+        /* ================================================= */
+        /* === Gaya untuk Hero Section dan Slider === */
+        /* ================================================= */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .slideshow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        /* Kontainer untuk semua slide */
+        .slides-wrapper {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        /* Setiap slide mengambil 100% dari lebar wrapper */
+        .mySlides {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-section h1 {
+            font-size: 6em;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section p {
+            font-size: 1.5em;
+            margin: 10px 0 50px;
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+            font-style: italic;
+        }
+
+        /* ================================================= */
+        /* === Gaya untuk Kontrol Audio (Mengambang) === */
+        /* ================================================= */
+        #background-music {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            opacity: 0.3;
+        }
+
+        /* ================================================= */
+        /* === Gaya untuk Slider Controls (Dots & Arrows) === */
+        /* ================================================= */
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            background-color: #f9f9f9;
+        }
+
+        .slider-button {
+            background: none;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            color: #ccc;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            margin: 0 10px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .slider-button:hover {
+            border-color: #999;
+            color: #999;
+        }
+
+        /* Gaya untuk tombol nonaktif */
+        .slider-button.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .slider-dots {
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+        }
+
+        .dot {
+            background-color: #ccc;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: red;
+            width: 12px;
+            height: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-top">
+            <div class="header-left">
+                <img src="Logo.png" alt="Logo Digitech">
+            </div>
+            <div class="header-right">
+                <img src="frima-2025.png" alt="Logo FRIMA 2025">
+            </div>
+        </div>
+        <div class="red-bar">
+            <marquee class="marquee-text" scrollamount="10">Pendaftaran Mahasiswa Baru 2025 dibuka ! Kunjungi https://pmb.digitechuniversity.ac.id/</marquee>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="slideshow-container">
+            <div class="slides-wrapper">
+                <div class="mySlides">
+                    <img src="frima-2025/01.JPG" alt="Lingkungan Kampus Universitas Teknologi Digital">
+                </div>
+                <div class="mySlides">
+                    <img src="frima-2025/02.JPG" alt="Lingkungan Kampus Universitas Teknologi Digital">
+                </div>
+		<div class="mySlides">
+                    <img src="frima-2025/03.JPG" alt="Lingkungan Kampus Universitas Teknologi Digital">
+                </div>
+		<div class="mySlides">
+                    <img src="frima-2025/04.JPG" alt="Lingkungan Kampus Universitas Teknologi Digital">
+                </div>
+		<div class="mySlides">
+                    <img src="frima-2025/05.JPG" alt="Lingkungan Kampus Universitas Teknologi Digital">
+                </div>
+		<div class="mySlides">
+                    <img src="frima-2025/06.JPG" alt="Lingkungan Kampus Universitas Teknologi Digital">
+                </div>
+		<div class="mySlides">
+                    <img src="frima-2025/07.JPG" alt="Lingkungan Kampus Universitas Teknologi Digital">
+                </div>
+		<div class="mySlides">
+                    <img src="frima-2025/08.JPG" alt="Lingkungan Kampus Universitas Teknologi Digital">
+                </div>
+		<div class="mySlides">
+                    <img src="frima-2025/09.JPG" alt="Lingkungan Kampus Universitas Teknologi Digital">
+                </div>
+		<div class="mySlides">
+                    <img src="frima-2025/10.JPG" alt="Lingkungan Kampus Universitas Teknologi Digital">
+                </div>
+            </div>
+        </div>
+
+        <audio id="background-music" src="hymne.mp3" loop autoplay controls></audio>
+        <h1>Universitas Teknologi Digital</h1>
+        <p>" Gerbang Peradaban Digital "</p>
+    </main>
+
+    <div class="slider-controls">
+        <button class="slider-button" id="prev-button" onclick="plusSlides(-1)">
+            &lt;
+        </button>
+        <div class="slider-dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+	    <span class="dot" onclick="currentSlide(8)"></span>
+	    <span class="dot" onclick="currentSlide(9)"></span>
+	    <span class="dot" onclick="currentSlide(10)"></span>
+        </div>
+        <button class="slider-button" id="next-button" onclick="plusSlides(1)">
+            &gt;
+        </button>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        const slides = document.querySelectorAll(".mySlides");
+        const dots = document.querySelectorAll(".dot");
+        const prevButton = document.getElementById("prev-button");
+        const nextButton = document.getElementById("next-button");
+        const slidesWrapper = document.querySelector(".slides-wrapper");
+
+        function showSlides() {
+            // Hitung nilai transform translateX
+            let offset = -(slideIndex - 1) * 100;
+            slidesWrapper.style.transform = `translateX(${offset}%)`;
+            
+            updateDots();
+            updateButtons();
+        }
+
+        function plusSlides(n) {
+            let newIndex = slideIndex + n;
+
+            // Hentikan pergerakan jika sudah di ujung (non-looping)
+            if (newIndex < 1 || newIndex > slides.length) {
+                return;
+            }
+            slideIndex = newIndex;
+            showSlides();
+        }
+
+        function currentSlide(n) {
+            slideIndex = n;
+            showSlides();
+        }
+
+        function updateDots() {
+            dots.forEach(dot => dot.classList.remove("active"));
+            if (dots[slideIndex - 1]) {
+                dots[slideIndex - 1].classList.add("active");
+            }
+        }
+
+        function updateButtons() {
+            prevButton.classList.toggle('disabled', slideIndex === 1);
+            prevButton.disabled = slideIndex === 1;
+
+            nextButton.classList.toggle('disabled', slideIndex === slides.length);
+            nextButton.disabled = slideIndex === slides.length;
+        }
+
+        // Inisialisasi slide pertama
+        showSlides();
+    </script>
+</body>
+</html>
