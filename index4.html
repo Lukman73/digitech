@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universitas Teknologi Digital | Kampus Terbaik untuk Jurusan IT</title>
     <style>
-        /* ================================================= */
-        /* === Gaya Dasar untuk Seluruh Halaman === */
-        /* ================================================= */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -15,9 +12,6 @@
             box-sizing: border-box;
         }
 
-        /* ================================================= */
-        /* === Gaya untuk Header (Bagian Atas) === */
-        /* ================================================= */
         .header {
             display: flex;
             flex-direction: column;
@@ -41,9 +35,6 @@
             height: 85px;
         }
 
-        /* ================================================= */
-        /* === Gaya untuk Bar Merah === */
-        /* ================================================= */
         .red-bar {
             background-color: red;
             color: white;
@@ -53,7 +44,6 @@
             align-items: center;
         }
 
-        /* Gaya untuk teks berjalan */
         .marquee-text {
             color: white;
             font-weight: bold;
@@ -61,9 +51,6 @@
             white-space: nowrap;
         }
 
-        /* ================================================= */
-        /* === Gaya untuk Hero Section dan Slider === */
-        /* ================================================= */
         .hero-section {
             position: relative;
             width: 100%;
@@ -87,7 +74,6 @@
             overflow: hidden;
         }
 
-        /* Kontainer untuk semua slide */
         .slides-wrapper {
             display: flex;
             width: 100%;
@@ -95,7 +81,6 @@
             transition: transform 0.5s ease-in-out;
         }
         
-        /* Setiap slide mengambil 100% dari lebar wrapper */
         .mySlides {
             flex-shrink: 0;
             width: 100%;
@@ -108,34 +93,15 @@
             object-fit: cover;
         }
 
-        .hero-section h1 {
-            font-size: 2em;
-            margin: 0;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-section p {
-            font-size: 1.5em;
-            margin: 10px 0 50px;
-            text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-            font-style: normal;
-        }
-
-        /* ================================================= */
-        /* === Gaya untuk Kontrol Audio (Mengambang) === */
-        /* ================================================= */
         #background-music {
             position: absolute;
             top: 90%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 10;
-            opacity: 0.5;
+            opacity: 0.7;
         }
 
-        /* ================================================= */
-        /* === Gaya untuk Slider Controls (Dots & Arrows) === */
-        /* ================================================= */
         .slider-controls {
             display: flex;
             justify-content: center;
@@ -165,7 +131,6 @@
             color: #999;
         }
 
-        /* Gaya untuk tombol nonaktif */
         .slider-button.disabled {
             opacity: 0.5;
             cursor: not-allowed;
@@ -195,68 +160,52 @@
 </head>
 <body>
 
-    <header class="header">
-        <div class="header-top">
-            <div class="header-left">
-                <img src="Logo.png" alt="Logo Digitech">
-            </div>
-            <div class="header-right">
-                <img src="PDI.png" alt="Logo PDI Perjuangan">
-            </div>
+<header class="header">
+    <div class="header-top">
+        <div class="header-left">
+            <img src="Logo.png" alt="Logo Digitech">
         </div>
-        <div class="red-bar">
-            <marquee class="marquee-text" scrollamount="10">Pendaftaran Mahasiswa Baru 2025 dibuka ! Kunjungi https://pmb.digitechuniversity.ac.id/</marquee>
+        <div class="header-right">
+            <img src="PDI.png" alt="Logo PDI Perjuangan">
         </div>
-    </header>
-
-    <main class="hero-section">
-        <div class="slideshow-container">
-            <div class="slides-wrapper">
-                <div class="mySlides">
-                    <img src="img4/01.jpg" alt="Lingkungan Kampus Universitas Teknologi Digital">
-                </div>
-                <div class="mySlides">
-                    <img src="img4/02.jpg" alt="Lingkungan Kampus Universitas Teknologi Digital">
-                </div>
-		<div class="mySlides">
-                    <img src="img4/03.jpg" alt="Lingkungan Kampus Universitas Teknologi Digital">
-                </div>
-		<div class="mySlides">
-                    <img src="img4/04.jpg" alt="Lingkungan Kampus Universitas Teknologi Digital">
-                </div>
-		<div class="mySlides">
-                    <img src="img4/05.jpg" alt="Lingkungan Kampus Universitas Teknologi Digital">
-                </div>
-		<div class="mySlides">
-                    <img src="img4/06.jpg" alt="Lingkungan Kampus Universitas Teknologi Digital">
-                </div>
-		
-            </div>
-        </div>
-
-        <audio id="background-music" src="hymne.mp3" loop autoplay controls></audio>
-     
-    </main>
-
-    <div class="slider-controls">
-        <button class="slider-button" id="prev-button" onclick="plusSlides(-1)">
-            &lt;
-        </button>
-        <div class="slider-dots">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-	    <span class="dot" onclick="currentSlide(6)"></span>
-        </div>
-        <button class="slider-button" id="next-button" onclick="plusSlides(1)">
-            &gt;
-        </button>
     </div>
-	
-        <!-- Bagian Berita -->
-    <section style="padding:40px 50px; background-color:#f9f9f9;">
+    <div class="red-bar">
+        <marquee class="marquee-text" scrollamount="10">
+            Pendaftaran Mahasiswa Baru 2025 dibuka ! Kunjungi https://pmb.digitechuniversity.ac.id/
+        </marquee>
+    </div>
+</header>
+
+<main class="hero-section">
+    <div class="slideshow-container">
+        <div class="slides-wrapper">
+            <div class="mySlides"><img src="img4/01.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img4/02.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img4/03.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img4/04.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img4/05.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img4/06.jpg" alt="Lingkungan Kampus"></div>
+        </div>
+    </div>
+
+    <!-- Audio Playlist -->
+    <audio id="background-music" controls autoplay></audio>
+</main>
+
+<div class="slider-controls">
+    <button class="slider-button" id="prev-button" onclick="plusSlides(-1)">&lt;</button>
+    <div class="slider-dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+    <button class="slider-button" id="next-button" onclick="plusSlides(1)">&gt;</button>
+</div>
+
+<section style="padding:40px 50px; background-color:#f9f9f9;">
         <h2 style="text-align:center; color:#b30000; margin-bottom:20px;">
             Kunjungan Kerja Anggota DPR-RI Komisi X Fraksi PDI Perjuangan di Universitas Teknologi Digital
         </h2>
@@ -305,81 +254,96 @@
         </div>
     </section>
 
+<script>
+let slideIndex = 1;
+const slides = document.querySelectorAll(".mySlides");
+const dots = document.querySelectorAll(".dot");
+const prevButton = document.getElementById("prev-button");
+const nextButton = document.getElementById("next-button");
+const slidesWrapper = document.querySelector(".slides-wrapper");
+let autoSlideInterval;
 
-    <script>
-        let slideIndex = 1;
-        const slides = document.querySelectorAll(".mySlides");
-        const dots = document.querySelectorAll(".dot");
-        const prevButton = document.getElementById("prev-button");
-        const nextButton = document.getElementById("next-button");
-        const slidesWrapper = document.querySelector(".slides-wrapper");
+function showSlides() {
+    let offset = -(slideIndex - 1) * 100;
+    slidesWrapper.style.transform = `translateX(${offset}%)`;
+    updateDots();
+    updateButtons();
+}
 
-        function showSlides() {
-            // Hitung nilai transform translateX
-            let offset = -(slideIndex - 1) * 100;
-            slidesWrapper.style.transform = `translateX(${offset}%)`;
-            
-            updateDots();
-            updateButtons();
-        }
+function plusSlides(n) {
+    slideIndex += n;
+    if (slideIndex < 1) slideIndex = slides.length;
+    if (slideIndex > slides.length) slideIndex = 1;
+    showSlides();
+    resetAutoSlide();
+}
 
-        function plusSlides(n) {
-            let newIndex = slideIndex + n;
+function currentSlide(n) {
+    slideIndex = n;
+    showSlides();
+    resetAutoSlide();
+}
 
-            // Hentikan pergerakan jika sudah di ujung (non-looping)
-            if (newIndex < 1 || newIndex > slides.length) {
-                return;
-            }
-            slideIndex = newIndex;
-            showSlides();
-        }
+function updateDots() {
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[slideIndex - 1].classList.add("active");
+}
 
-        function currentSlide(n) {
-            slideIndex = n;
-            showSlides();
-        }
+function updateButtons() {
+    prevButton.classList.remove('disabled');
+    nextButton.classList.remove('disabled');
+}
 
-        function updateDots() {
-            dots.forEach(dot => dot.classList.remove("active"));
-            if (dots[slideIndex - 1]) {
-                dots[slideIndex - 1].classList.add("active");
-            }
-        }
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        plusSlides(1);
+    }, 5000); // ganti gambar setiap 5 detik
+}
 
-        function updateButtons() {
-            prevButton.classList.toggle('disabled', slideIndex === 1);
-            prevButton.disabled = slideIndex === 1;
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
 
-            nextButton.classList.toggle('disabled', slideIndex === slides.length);
-            nextButton.disabled = slideIndex === slides.length;
-        }
+showSlides();
+startAutoSlide();
+</script>
 
-        // Inisialisasi slide pertama
-        showSlides();
-    </script>
+<script>
+// Playlist Musik
+const playlist = [
+    "hymne.mp3",
+    "hymne stembi.mp3",
+    
+];
+let currentTrack = 0;
+const player = document.getElementById("background-music");
 
-	<script>
-		document.addEventListener('contextmenu', event => event.preventDefault());
-		document.onkeydown = function(e) {
-            if (
-              e.keyCode == 123 || // F12
-              (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
-              (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) // Ctrl+U
-            ) {
-              return false;
-            }
-        }
-    </script>
-	
+player.src = playlist[currentTrack];
+player.play();
+
+player.addEventListener("ended", function() {
+    currentTrack++;
+    if (currentTrack >= playlist.length) {
+        currentTrack = 0;
+    }
+    player.src = playlist[currentTrack];
+    player.play();
+});
+</script>
+
+<script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeydown = function(e) {
+    if (
+        e.keyCode == 123 ||
+        (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) ||
+        (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))
+    ) {
+        return false;
+    }
+}
+</script>
+
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
