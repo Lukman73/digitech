@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas Teknologi Digital | Kampus Terbaik untuk Jurusan IT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-left img {
+            height: 80px;
+        }
+
+        .header-right img {
+            height: 65px;
+        }
+
+        .red-bar {
+            background-color: red;
+            color: white;
+            padding: 10px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .marquee-text {
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            white-space: nowrap;
+        }
+
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .slideshow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .slides-wrapper {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .mySlides {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #background-music {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            opacity: 0.7;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            background-color: #f9f9f9;
+        }
+
+        .slider-button {
+            background: none;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            color: #ccc;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            margin: 0 10px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .slider-button:hover {
+            border-color: #999;
+            color: #999;
+        }
+
+        .slider-button.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .slider-dots {
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+        }
+
+        .dot {
+            background-color: #ccc;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: red;
+            width: 12px;
+            height: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-top">
+        <div class="header-left">
+            <img src="Logo.png" alt="Logo Digitech">
+        </div>
+        <div class="header-right">
+            <img src="Logo_Kampus_Merdeka_Kemendikbud.png" alt="Logo Kampus Merdeka">
+        </div>
+    </div>
+    <div class="red-bar">
+        <marquee class="marquee-text" scrollamount="10">
+            Pendaftaran Mahasiswa Baru 2025 dibuka ! Kunjungi https://pmb.digitechuniversity.ac.id/
+        </marquee>
+    </div>
+</header>
+
+<main class="hero-section">
+    <div class="slideshow-container">
+        <div class="slides-wrapper">
+            <div class="mySlides"><img src="img5/00.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img5/01.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img5/02.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img5/03.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img5/04.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img5/05.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img5/06.jpg" alt="Lingkungan Kampus"></div>
+	    <div class="mySlides"><img src="img5/07.jpg" alt="Lingkungan Kampus"></div>
+	    <div class="mySlides"><img src="img5/08.jpg" alt="Lingkungan Kampus"></div>
+	    <div class="mySlides"><img src="img5/09.jpg" alt="Lingkungan Kampus"></div>
+	    <div class="mySlides"><img src="img5/10.jpg" alt="Lingkungan Kampus"></div>
+	    <div class="mySlides"><img src="img5/11.jpg" alt="Lingkungan Kampus"></div>
+        </div>
+    </div>
+
+    <!-- Audio Playlist -->
+    <audio id="background-music" controls autoplay></audio>
+</main>
+
+<div class="slider-controls">
+    <button class="slider-button" id="prev-button" onclick="plusSlides(-1)">&lt;</button>
+    <div class="slider-dots">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+	<span class="dot" onclick="currentSlide(7)"></span>
+	<span class="dot" onclick="currentSlide(8)"></span>
+	<span class="dot" onclick="currentSlide(9)"></span>
+	<span class="dot" onclick="currentSlide(10)"></span>
+	<span class="dot" onclick="currentSlide(11)"></span>
+    </div>
+    <button class="slider-button" id="next-button" onclick="plusSlides(1)">&gt;</button>
+</div>
+
+<section style="padding:40px 50px; background-color:#f9f9f9;">
+        <h2 style="text-align:center; color:#b30000; margin-bottom:20px;">
+            Semangat Kemerdekaan, Raih Prestasi, Eratkan Persaudaraan
+        </h2>
+        <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+
+            <!-- Kolom 1 -->
+            <div style="flex:1 1 400px; min-width:300px; text-align:justify; line-height:1.6;">
+                <p>
+                    Agustusan selalu jadi momen paling ditunggu! Bukan cuma buat seru-seruan, tapi juga buat ngerasain vibe perjuangan dengan cara yang lebih fun. Dari lomba kecil sampai yang bikin ngakak bareng, semuanya punya satu tujuan: nunjukin semangat kemerdekaan kita sebagai mahasiswa.
+                </p>
+                <p>
+                    Di tiap perlombaan, bukan cuma soal siapa yang menang. Yang paling penting adalah keberanian buat coba, sportivitas saat main, dan pastinya tawa bareng teman-teman. Karena dari situlah kita bisa belajar arti perjuangan yang sebenarnya.
+                </p>
+            </div>
+
+            <!-- Kolom 2 -->
+            <div style="flex:1 1 400px; min-width:300px; text-align:justify; line-height:1.6;">
+                <p>
+                    Dan yang paling keren, lewat lomba ini kita bisa makin dekat satu sama lain. Ada kebersamaan, ada dukungan, ada rasa persaudaraan yang bikin suasana kampus jadi hangat banget. Pokoknya, menang atau kalah, kita tetap satu keluarga besar!
+                </p>
+                <p>
+                    Jadi, yuk gaspol semangat merah putihnya! Jangan cuma ikut lomba buat fun, tapi juga tanamkan tekad buat jadi generasi kampus yang kreatif, solid, dan siap bawa Indonesia makin maju ke depan!
+                </p>
+                
+            </div>
+
+        </div>
+    </section>
+
+<script>
+let slideIndex = 1;
+const slides = document.querySelectorAll(".mySlides");
+const dots = document.querySelectorAll(".dot");
+const prevButton = document.getElementById("prev-button");
+const nextButton = document.getElementById("next-button");
+const slidesWrapper = document.querySelector(".slides-wrapper");
+let autoSlideInterval;
+
+function showSlides() {
+    let offset = -(slideIndex - 1) * 100;
+    slidesWrapper.style.transform = `translateX(${offset}%)`;
+    updateDots();
+    updateButtons();
+}
+
+function plusSlides(n) {
+    slideIndex += n;
+    if (slideIndex < 1) slideIndex = slides.length;
+    if (slideIndex > slides.length) slideIndex = 1;
+    showSlides();
+    resetAutoSlide();
+}
+
+function currentSlide(n) {
+    slideIndex = n;
+    showSlides();
+    resetAutoSlide();
+}
+
+function updateDots() {
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[slideIndex - 1].classList.add("active");
+}
+
+function updateButtons() {
+    prevButton.classList.remove('disabled');
+    nextButton.classList.remove('disabled');
+}
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        plusSlides(1);
+    }, 5000); // ganti gambar setiap 5 detik
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+showSlides();
+startAutoSlide();
+</script>
+
+<script>
+// Playlist Musik
+const playlist = [
+    "hymne.mp3",
+    "hymne stembi.mp3",
+    
+];
+let currentTrack = 0;
+const player = document.getElementById("background-music");
+
+player.src = playlist[currentTrack];
+player.play();
+
+player.addEventListener("ended", function() {
+    currentTrack++;
+    if (currentTrack >= playlist.length) {
+        currentTrack = 0;
+    }
+    player.src = playlist[currentTrack];
+    player.play();
+});
+</script>
+
+<script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeydown = function(e) {
+    if (
+        e.keyCode == 123 ||
+        (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) ||
+        (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))
+    ) {
+        return false;
+    }
+}
+</script>
+
+</body>
+</html>
+
