@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas Teknologi Digital | Kampus Terbaik untuk Jurusan IT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-left img {
+            height: 80px;
+        }
+
+        .header-right img {
+            height: 65px;
+        }
+
+        .red-bar {
+            background-color: red;
+            color: white;
+            padding: 10px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .marquee-text {
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            white-space: nowrap;
+        }
+
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .slideshow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .slides-wrapper {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .mySlides {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #background-music {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            opacity: 0.7;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            background-color: #f9f9f9;
+        }
+
+        .slider-button {
+            background: none;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            color: #ccc;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            margin: 0 10px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .slider-button:hover {
+            border-color: #999;
+            color: #999;
+        }
+
+        .slider-button.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .slider-dots {
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+        }
+
+        .dot {
+            background-color: #ccc;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: red;
+            width: 12px;
+            height: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-top">
+        <div class="header-left">
+            <img src="Logo.png" alt="Logo Digitech">
+        </div>
+        <div class="header-right">
+            <img src="Logo_Kampus_Merdeka_Kemendikbud.png" alt="Logo Kampus Merdeka">
+        </div>
+    </div>
+    <div class="red-bar">
+        <marquee class="marquee-text" scrollamount="10">
+            Pendaftaran Mahasiswa Baru 2025 dibuka ! Kunjungi https://pmb.digitechuniversity.ac.id/
+        </marquee>
+    </div>
+</header>
+
+<main class="hero-section">
+    <div class="slideshow-container">
+        <div class="slides-wrapper">
+            <div class="mySlides"><img src="img7/00.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img7/01.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img7/02.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img7/03.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img7/04.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img7/05.jpg" alt="Lingkungan Kampus"></div>
+            <div class="mySlides"><img src="img7/06.jpg" alt="Lingkungan Kampus"></div>
+	    <div class="mySlides"><img src="img7/07.jpg" alt="Lingkungan Kampus"></div>
+	    <div class="mySlides"><img src="img7/08.jpg" alt="Lingkungan Kampus"></div>
+	    <div class="mySlides"><img src="img7/09.jpg" alt="Lingkungan Kampus"></div>
+	    <div class="mySlides"><img src="img7/10.jpg" alt="Lingkungan Kampus"></div>
+	    
+        </div>
+    </div>
+
+    <!-- Audio Playlist -->
+    <audio id="background-music" controls autoplay></audio>
+</main>
+
+<div class="slider-controls">
+    <button class="slider-button" id="prev-button" onclick="plusSlides(-1)">&lt;</button>
+    <div class="slider-dots">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+	<span class="dot" onclick="currentSlide(7)"></span>
+	<span class="dot" onclick="currentSlide(8)"></span>
+	<span class="dot" onclick="currentSlide(9)"></span>
+	<span class="dot" onclick="currentSlide(10)"></span>
+	
+    </div>
+    <button class="slider-button" id="next-button" onclick="plusSlides(1)">&gt;</button>
+</div>
+
+<section style="padding:40px 50px; background-color:#f9f9f9;">
+        <h2 style="text-align:center; color:#000080; margin-bottom:20px;">
+            Yudisium Prodi Manajemen S1 - Universitas Teknologi Digital
+        </h2>
+        <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+
+            <!-- Kolom 1 -->
+            <div style="flex:1 1 400px; min-width:300px; text-align:justify; line-height:1.6;">
+                <p>
+                    Yudisium di Universitas Teknologi Digital merupakan salah satu momen penting dalam perjalanan akademik mahasiswa. Pada tahap ini, pihak universitas secara resmi mengumumkan kelulusan mahasiswa setelah melalui proses evaluasi akademik yang panjang. Bukan hanya sekadar acara formal, yudisium adalah penegasan bahwa seluruh perjuangan, kerja keras, dan doa yang telah dipanjatkan selama masa perkuliahan akhirnya membuahkan hasil.
+                </p>
+                <p>
+                    Lebih dari sekadar pengumuman, yudisium juga menjadi simbol transisi. Mahasiswa Universitas Teknologi Digital yang sebelumnya berstatus sebagai peserta didik kini siap melangkah ke tahap baru, baik untuk melanjutkan studi yang lebih tinggi maupun terjun langsung ke dunia kerja. Pada momen ini pula, setiap mahasiswa belajar arti tanggung jawab yang lebih besar karena ilmu yang diperoleh di bangku kuliah kini harus bermanfaat bagi masyarakat.
+                </p>
+            </div>
+
+            <!-- Kolom 2 -->
+            <div style="flex:1 1 400px; min-width:300px; text-align:justify; line-height:1.6;">
+                <p>
+                    Selain itu, yudisium juga menjadi ajang refleksi diri. Mahasiswa Universitas Teknologi Digital dapat mengenang kembali perjalanan panjang yang penuh suka dan duka: mulai dari tugas menumpuk, bimbingan skripsi, hingga kebersamaan dengan teman-teman seperjuangan. Semua itu menjadi kenangan indah yang tidak akan pernah terlupakan, sekaligus pengingat bahwa setiap pencapaian membutuhkan proses dan pengorbanan.
+                </p>
+                <p>
+                    Akhirnya, yudisium bukan hanya penutup sebuah fase, melainkan juga pembuka jalan untuk masa depan. Dengan ilmu dan pengalaman yang diperoleh di Universitas Teknologi Digital, para lulusan diharapkan mampu menjadi pribadi yang unggul, berintegritas, dan siap memberikan kontribusi nyata bagi bangsa dan masyarakat. Semoga momentum yudisium ini menjadi awal langkah yang penuh keberkahan dan kesuksesan bagi setiap lulusan.
+                </p>
+                
+            </div>
+
+        </div>
+    </section>
+
+<script>
+let slideIndex = 1;
+const slides = document.querySelectorAll(".mySlides");
+const dots = document.querySelectorAll(".dot");
+const prevButton = document.getElementById("prev-button");
+const nextButton = document.getElementById("next-button");
+const slidesWrapper = document.querySelector(".slides-wrapper");
+let autoSlideInterval;
+
+function showSlides() {
+    let offset = -(slideIndex - 1) * 100;
+    slidesWrapper.style.transform = `translateX(${offset}%)`;
+    updateDots();
+    updateButtons();
+}
+
+function plusSlides(n) {
+    slideIndex += n;
+    if (slideIndex < 1) slideIndex = slides.length;
+    if (slideIndex > slides.length) slideIndex = 1;
+    showSlides();
+    resetAutoSlide();
+}
+
+function currentSlide(n) {
+    slideIndex = n;
+    showSlides();
+    resetAutoSlide();
+}
+
+function updateDots() {
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[slideIndex - 1].classList.add("active");
+}
+
+function updateButtons() {
+    prevButton.classList.remove('disabled');
+    nextButton.classList.remove('disabled');
+}
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        plusSlides(1);
+    }, 5000); // ganti gambar setiap 5 detik
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+showSlides();
+startAutoSlide();
+</script>
+
+<script>
+// Playlist Musik
+const playlist = [
+    "hymne.mp3",
+    "hymne stembi.mp3",
+    
+];
+let currentTrack = 0;
+const player = document.getElementById("background-music");
+
+player.src = playlist[currentTrack];
+player.play();
+
+player.addEventListener("ended", function() {
+    currentTrack++;
+    if (currentTrack >= playlist.length) {
+        currentTrack = 0;
+    }
+    player.src = playlist[currentTrack];
+    player.play();
+});
+</script>
+
+<script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeydown = function(e) {
+    if (
+        e.keyCode == 123 ||
+        (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) ||
+        (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))
+    ) {
+        return false;
+    }
+}
+</script>
+
+</body>
+</html>
+
